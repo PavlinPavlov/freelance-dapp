@@ -1,0 +1,34 @@
+<div class="container">
+  <h1>Sign Payment Message</h1>
+  <form class="sign-form" (ngSubmit)="onSignSubmit(f)" #f="ngForm">
+    <div class="form-group">
+      <label for="contract">Contract Address</label>
+      <input id="contract" [ngModel]="address" class="form-control" name="contract" readonly>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="nonce">Nonce</label>
+        <input id="nonce" ngModel class="form-control" name="nonce" min="1">
+      </div>
+      <div class="form-group">
+        <label for="amount">Amount Sign:</label>
+        <input id="amount" ngModel class="form-control" name="amount" type="number" step="0.01" placeholder="ETH">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Sign</button>
+      </div>
+    </div>
+      <div class="form-group">
+        <label for="signed-message">Signed Message:</label>
+        <input #inputField
+               id="signed-message"
+               class="form-control"
+               name="signed-message"
+               type="text"
+               [value]="copyText"
+               readonly/>
+        <button class="btn btn-secondary btn-copy" (click)="copyToClipboard(inputField)">Copy</button>
+      </div>
+  </form>
+</div>

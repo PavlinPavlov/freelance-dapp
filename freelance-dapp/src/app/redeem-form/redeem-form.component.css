@@ -1,0 +1,55 @@
+
+.container {
+  max-width: 80%;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.redeem-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  align-items: flex-start;
+}
+
+.form-group label {
+  width: 150px;
+  text-align: left;
+}
+
+.form-group input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#amount {
+  flex: 0 0 60%;
+}
+#nonce {
+  flex: 0 0 15%;
+}
+
+@media (max-width: 910px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-row .form-group {
+    flex-basis: 100%;
+  }
+}
+

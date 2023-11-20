@@ -1,0 +1,6 @@
+<h2>Emitted events</h2>
+<div class="list-group" style="height: 500px; overflow-y: auto;">
+  <a href="#" class="list-group-item list-group-item-action" *ngFor="let event of events">
+    <app-contract-event-card [log]="event"></app-contract-event-card>
+  </a>
+</div>

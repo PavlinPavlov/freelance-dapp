@@ -1,0 +1,6 @@
+.trim-text p {
+  width: 100%; /* Set a fixed width or max-width */
+  white-space: nowrap; /* Keeps the text in a single line */
+  overflow: hidden; /* Hide the overflowing text */
+  text-overflow: ellipsis; /* Display an ellipsis (...) to represent the clipped text */
+}

@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <table class="table">
+    <tr>
+      <td class="accented-column">Contract Address</td>
+      <td class="wide-column">{{ openedContract.contractAddress }}</td>
+    </tr>
+    <tr>
+      <td class="accented-column">Owner Address</td>
+      <td class="wide-column">{{ openedContract.contractOwner }}</td>
+    </tr>
+    <tr>
+      <td class="accented-column">Recipient Address</td>
+      <td class="wide-column">{{ openedContract.contractRecipient }}</td>
+    </tr>
+    <tr>
+      <td class="accented-column">Balance</td>
+      <td class="wide-column">{{ getBalanceInEther() }} ETH</td>
+  </table>
+  <hr>
+  <div class="row-flex-container">
+
+    <section class="event-list">
+      <app-contract-event-list [contract]="openedContract"></app-contract-event-list>
+    </section>
+
+    <section class="col-flex-container">
+
+      <div class="btn-row">
+        <h2>Actions</h2>
+        <button-sign *ngIf="isOwner()" [address]="openedContract.contractAddress"></button-sign>
+        <button mat-raised-button color="primary" *ngIf="isOwner()">Close Channel</button>
+        <button-verify *ngIf="isRecipient()"></button-verify>
+        <button mat-raised-button color="primary" *ngIf="isRecipient()">Redeem Payment</button>
+      </div>
+
+      <hr>
+
+      <h2>Redeem</h2>
+      <div class="redeem-form">
+        <app-redeem-form *ngIf="isRecipient()" [openedContract]="openedContract"></app-redeem-form>
+      </div>
+
+    </section>
+  </div>
+
+</div>

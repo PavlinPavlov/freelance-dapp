@@ -1,0 +1,4 @@
+/* Add this CSS to create space between the title and buttons */
+.spacer {
+  flex: 1 1 auto;
+}
