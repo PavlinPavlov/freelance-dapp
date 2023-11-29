@@ -1,5 +1,6 @@
 <div class="container-fluid">
   <table class="table">
+    <!--    mat table?-->
     <tr>
       <td class="accented-column">Contract Address</td>
       <td class="wide-column">{{ openedContract.contractAddress }}</td>
@@ -33,11 +34,11 @@
         <button mat-raised-button color="primary" *ngIf="isRecipient()">Redeem Payment</button>
       </div>
 
-      <hr>
+      <hr style="margin: 0 0 10px 0">
 
-      <h2>Redeem</h2>
-      <div class="redeem-form">
-        <app-redeem-form *ngIf="isRecipient()" [openedContract]="openedContract"></app-redeem-form>
+      <div *ngIf="isRecipient()">
+        <h2>Redeem</h2>
+          <app-redeem-form [openedContract]="openedContract"></app-redeem-form>
       </div>
 
     </section>

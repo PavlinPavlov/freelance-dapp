@@ -1,6 +1,6 @@
 .btn-row {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 25px;
 }
 
