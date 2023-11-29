@@ -1,10 +1,11 @@
 <div class="list-group">
   <a href="#"
      class="list-group-item list-group-item-action"
-     *ngFor="let contract of contracts"
-     [ngClass]="{'active': contract == focusedContract}"
-     (click)="focusedContract = contract">
-  <app-contract-card [contract]="contract"
+     *ngFor="let c of contracts"
+     (click)="focusedContract = c"
+     [ngClass]="{'active': c == focusedContract}"
+  >
+  <app-contract-card [inputContract]="c"
                        (contractClicked)="onContractClicked($event)"></app-contract-card>
   </a>
 </div>
