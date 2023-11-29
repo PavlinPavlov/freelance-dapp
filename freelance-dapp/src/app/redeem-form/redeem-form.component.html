@@ -1,21 +1,21 @@
-<div class="container">
   <form class="redeem-form" (ngSubmit)="onRedeemSubmit(f)" #f="ngForm">
     <div class="form-group">
       <label for="signature">Signature:</label>
       <input id="signature" ngModel class="form-control" name="signature">
     </div>
-    <div class="form-row">
-      <div class="form-group">
+
+
+    <div class="row">
+      <div class="form-group col">
         <label for="amount">Check Amount:</label>
-        <input id="amount" ngModel class="form-control" name="amount" type="number" step="0.01" placeholder="ETH">
+        <input id="amount" ngModel class="form-control col-4" name="amount" type="number" step="0.01" placeholder="ETH" >
       </div>
-      <div class="form-group">
+      <div class="form-group col">
         <label for="nonce">Check Nonce:</label>
         <input id="nonce" ngModel class="form-control" name="nonce" type="number" min="1">
       </div>
-      <div class="form-group">
+      <div class="form-group col">
         <button type="submit" class="btn btn-primary">Redeem</button>
       </div>
     </div>
   </form>
-</div>

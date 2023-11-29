@@ -10,6 +10,9 @@
 .redeem-form {
   display: flex;
   flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 16px;
 }
 
 .form-group {
@@ -29,11 +32,6 @@
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 9px;
-}
-
-.form-row {
-  display: flex;
-  justify-content: flex-start;
 }
 
 #amount {
