@@ -1,12 +1,12 @@
 <app-header></app-header>
-<!-- TODO  -->
+<!-- TODO  move in css file-->
 <div style="
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 2%;
+  margin: 2%;
 ">
-  <div style="width: 30%; height: 800px; overflow-y: auto; margin-left: 2%">
+  <div style="width: 30%; overflow-y: scroll; max-height: 90vh;">
     <app-contract-list (activeContract)="onContractSelected($event)"></app-contract-list>
   </div>
   <div style="width: 65%">
