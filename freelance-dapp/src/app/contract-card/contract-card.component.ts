@@ -9,10 +9,10 @@ import {BlockchainService} from '../services/blockchain.service';
 })
 export class ContractCardComponent implements OnInit {
 
-  @Input() contract!: ContractModel;
+  @Input("inputContract") contract!: ContractModel;
 
   @Output() contractClicked = new EventEmitter<ContractModel>();
-  private memaskSigner!: string;
+  private metaMaskSigner!: string;
 
   constructor(
     private _blockchainService: BlockchainService,
@@ -24,16 +24,14 @@ export class ContractCardComponent implements OnInit {
   }
 
   async ngOnInit() {
-    this.memaskSigner = await this.getSignerAddress();
+    this.metaMaskSigner = await this.getSignerAddress();
   }
   isOwner(): boolean {
-    return this.contract.contractOwner === this.memaskSigner;
+    return this.contract.contractOwner === this.metaMaskSigner;
   }
 
-  getSignerAddress() {
-    return this._blockchainService.getSigner().getAddress().then((address) => {
-      return address;
-    });
+  async getSignerAddress() {
+    return await this._blockchainService.getSigner().getAddress();
   }
 
 }

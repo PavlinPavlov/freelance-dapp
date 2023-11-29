@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ContractModel} from '../models/contract.model';
 import {BlockchainService} from '../services/blockchain.service';
 import {ethers} from 'ethers';
@@ -8,7 +8,7 @@ import {ethers} from 'ethers';
   templateUrl: './contract-detail.component.html',
   styleUrls: ['./contract-detail.component.css']
 })
-export class ContractDetailComponent {
+export class ContractDetailComponent implements OnInit {
 
   @Input('openedContract') openedContract!: ContractModel;
 
@@ -19,11 +19,8 @@ export class ContractDetailComponent {
     this.blockchainService = blockchainService;
   }
 
-  // TODO: ...
-  getSignerAddress() {
-    return this.blockchainService.getSigner().getAddress().then((address) => {
-      return address;
-    });
+  async getSignerAddress() {
+    return await this.blockchainService.getSigner().getAddress();
   }
 
   isOwner(): boolean {
