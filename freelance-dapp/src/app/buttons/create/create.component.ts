@@ -4,7 +4,7 @@ import {ContractCreateComponent} from '../../dialogs/contract-create/contract-cr
 
 @Component({
   selector: 'button-create',
-  template: '<button mat-raised-button color="accent" (click)="openDialog()">Create Contact</button>'
+  template: '<button mat-raised-button color="accent" (click)="openDialog()">Create Contract</button>'
 })
 export class CreateComponent {
 
