@@ -3,7 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "new-layout": {
+    "freelance-dapp": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "bg-BG": "src/locale/messages.bg.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +19,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/new-layout",
+            "localize": [
+              "bg-BG"
+            ],
+            "outputPath": "dist/freelance-dapp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -62,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "new-layout:build:production"
+              "browserTarget": "freelance-dapp:build:production"
             },
             "development": {
-              "browserTarget": "new-layout:build:development"
+              "browserTarget": "freelance-dapp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "new-layout:build"
+            "browserTarget": "freelance-dapp:build"
           }
         },
         "test": {

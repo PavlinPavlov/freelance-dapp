@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="8114246667475623617" datatype="html">
+        <source>Add Contract</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/buttons/add/add.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8850028603605418142" datatype="html">
+        <source>Create Contract</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/buttons/create/create.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3808517813006355192" datatype="html">
+        <source>Sign Message</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/buttons/sign/sign.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7232185409531401351" datatype="html">
+        <source>Verify Payment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/buttons/verify/verify.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8443568478896860043" datatype="html">
+        <source>Recipient</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contract-card/contract-card.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7887484314446514238" datatype="html">
+        <source>Contract Address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contract-detail/contract-detail.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3711400758798426097" datatype="html">
+        <source>Owner Address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contract-detail/contract-detail.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6019936223616471154" datatype="html">
+        <source>Recipient Address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contract-detail/contract-detail.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6888797559367695264" datatype="html">
+        <source>Balance</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contract-detail/contract-detail.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3193976279273491157" datatype="html">
+        <source>Actions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contract-detail/contract-detail.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2894812370562308385" datatype="html">
+        <source>Close Channel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contract-detail/contract-detail.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3820601025163305457" datatype="html">
+        <source>Redeem Payment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contract-detail/contract-detail.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7801884781403562273" datatype="html">
+        <source>Redeem</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contract-detail/contract-detail.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/redeem-form/redeem-form.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3862620244510026557" datatype="html">
+        <source>Emitted events</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contract-event-list/contract-event-list.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="735927792441394082" datatype="html">
+        <source>Contract address:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/contract-add/contract-add.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3249513483374643425" datatype="html">
+        <source>Add</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/contract-add/contract-add.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3438646521734595955" datatype="html">
+        <source>Contract title:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/contract-create/contract-create.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6996799422725544865" datatype="html">
+        <source>Description:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/contract-create/contract-create.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2921019456985884952" datatype="html">
+        <source>Recipient:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/contract-create/contract-create.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3848605480008272419" datatype="html">
+        <source>Amount:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/contract-create/contract-create.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4307553722019999573" datatype="html">
+        <source>Deadline:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/contract-create/contract-create.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5674286808255988565" datatype="html">
+        <source>Create</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/contract-create/contract-create.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8973531148721506562" datatype="html">
+        <source>Signature:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/redeem-form/redeem-form.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5746562516323695888" datatype="html">
+        <source>Check Amount:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/redeem-form/redeem-form.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8740317861321962739" datatype="html">
+        <source>Check Nonce:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/redeem-form/redeem-form.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

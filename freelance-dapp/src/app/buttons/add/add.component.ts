@@ -4,7 +4,7 @@ import {ContractAddComponent} from '../../dialogs/contract-add/contract-add.comp
 
 @Component({
   selector: 'button-add',
-  template: '<button mat-raised-button color="accent" (click)="openDialog()">Add Contract</button>'
+  template: '<button mat-raised-button color="accent" (click)="openDialog()" i18n>Add Contract</button>'
 })
 export class AddComponent {
 

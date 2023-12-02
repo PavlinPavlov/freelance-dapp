@@ -2,29 +2,29 @@
   <h1>Create New Contract</h1>
   <form class="contract-form" (ngSubmit)="onCreateSubmit(f)" #f="ngForm">
     <div class="form-group">
-      <label for="title">Contract title:</label>
+      <label for="title" i18n>Contract title:</label>
       <input ngModel type="text" id="title" name="title">
     </div>
     <div class="form-group">
-      <label for="description">Description:</label>
+      <label for="description" i18n>Description:</label>
       <textarea ngModel id="description" name="description"></textarea>
     </div>
     <div class="form-group">
-      <label for="recipient">Recipient:</label>
+      <label for="recipient" i18n>Recipient:</label>
       <input ngModel type="text" id="recipient" name="recipient">
     </div>
     <div class="form-row">
       <div class="form-group">
-        <label for="amount">Amount:</label>
+        <label for="amount" i18n>Amount:</label>
         <input ngModel type="number" id="amount" name="amount" step="0.01" placeholder="ETH">
       </div>
       <div class="form-group">
-        <label for="deadline">Deadline:</label>
+        <label for="deadline" i18n>Deadline:</label>
         <input [ngModel]="getFutureDate()" type="date" id="deadline" name="deadline" forma>
       </div>
     </div>
     <div class="form-group">
-      <button type="submit" class="btn btn-primary">Create</button>
+      <button type="submit" class="btn btn-primary" i18n>Create</button>
     </div>
   </form>
 </div>

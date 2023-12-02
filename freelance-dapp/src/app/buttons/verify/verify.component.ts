@@ -4,7 +4,7 @@ import {ContractCreateComponent} from '../../dialogs/contract-create/contract-cr
 
 @Component({
   selector: 'button-verify',
-  template: '<button mat-raised-button color="primary" (click)="openDialog()">Verify Payment</button>'
+  template: '<button mat-raised-button color="primary" (click)="openDialog()" i18n>Verify Payment</button>'
 })
 export class VerifyComponent {
 

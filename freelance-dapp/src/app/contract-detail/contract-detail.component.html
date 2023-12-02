@@ -2,19 +2,19 @@
   <table class="table">
     <!--    mat table?-->
     <tr>
-      <td class="accented-column">Contract Address</td>
+      <td class="accented-column" i18n>Contract Address</td>
       <td class="wide-column">{{ openedContract.contractAddress }}</td>
     </tr>
     <tr>
-      <td class="accented-column">Owner Address</td>
+      <td class="accented-column" i18n>Owner Address</td>
       <td class="wide-column">{{ openedContract.contractOwner }}</td>
     </tr>
     <tr>
-      <td class="accented-column">Recipient Address</td>
+      <td class="accented-column" i18n>Recipient Address</td>
       <td class="wide-column">{{ openedContract.contractRecipient }}</td>
     </tr>
     <tr>
-      <td class="accented-column">Balance</td>
+      <td class="accented-column" i18n>Balance</td>
       <td class="wide-column">{{ getBalanceInEther() }} ETH</td>
   </table>
   <hr>
@@ -27,17 +27,17 @@
     <section class="col-flex-container">
 
       <div class="btn-row">
-        <h2>Actions</h2>
+        <h2 i18n>Actions</h2>
         <button-sign *ngIf="isOwner()" [address]="openedContract.contractAddress"></button-sign>
-        <button mat-raised-button color="primary" *ngIf="isOwner()">Close Channel</button>
+        <button mat-raised-button color="primary" *ngIf="isOwner()" i18n>Close Channel</button>
         <button-verify *ngIf="isRecipient()"></button-verify>
-        <button mat-raised-button color="primary" *ngIf="isRecipient()">Redeem Payment</button>
+        <button mat-raised-button color="primary" *ngIf="isRecipient()" i18n>Redeem Payment</button>
       </div>
 
       <hr style="margin: 0 0 10px 0">
 
       <div *ngIf="isRecipient()">
-        <h2>Redeem</h2>
+        <h2 i18n>Redeem</h2>
           <app-redeem-form [openedContract]="openedContract"></app-redeem-form>
       </div>
 

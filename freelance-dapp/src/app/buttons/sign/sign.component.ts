@@ -4,7 +4,7 @@ import {SignMessageComponent} from '../../dialogs/sign-message/sign-message.comp
 
 @Component({
   selector: 'button-sign',
-  template: '<button mat-raised-button color="primary" (click)="openDialog()">Sign Message</button>'
+  template: '<button mat-raised-button color="primary" (click)="openDialog()" i18n>Sign Message</button>'
 })
 export class SignComponent {
 
