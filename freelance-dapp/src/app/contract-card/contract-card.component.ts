@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ContractModel} from '../models/contract.model';
 import {BlockchainService} from '../services/blockchain.service';
+import {LocalStorageService} from '../services/local-storage.service';
 
 @Component({
   selector: 'app-contract-card',
@@ -16,6 +17,7 @@ export class ContractCardComponent implements OnInit {
 
   constructor(
     private _blockchainService: BlockchainService,
+    private _localStorageService: LocalStorageService
   ) {
   }
 
@@ -34,4 +36,7 @@ export class ContractCardComponent implements OnInit {
     return await this._blockchainService.getSigner().getAddress();
   }
 
+  removeFromLS() {
+    this._localStorageService.removeContractAddress(this.metaMaskSigner, this.contract.contractAddress);
+  }
 }

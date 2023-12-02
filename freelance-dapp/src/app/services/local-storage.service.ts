@@ -38,4 +38,12 @@ export class LocalStorageService implements StorageAccessor {
     return addresses;
   }
 
+  removeContractAddress(owner: string, address: string): string[] {
+    let lsValue = localStorage.getItem(this.addresses_prefix + owner);
+    let addresses: string[] = lsValue ? JSON.parse(lsValue) : [];
+    addresses = addresses.filter(a => a !== address);
+    this.setContractAddressesForOwner(owner, addresses);
+    return addresses;
+  }
+
 }

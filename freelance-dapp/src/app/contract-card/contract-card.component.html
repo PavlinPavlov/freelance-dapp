@@ -1,5 +1,10 @@
 <div class="trim-text" (click)="onCardClick()">
-  <h3><mat-icon *ngIf="isOwner()">stars</mat-icon> {{ contract.info.title }}</h3>
+
+  <h3>
+    <mat-icon *ngIf="isOwner()">stars</mat-icon>
+    {{ contract.info.title }}
+    <mat-icon class="delete-icon" (click)="removeFromLS()">delete_forever</mat-icon>
+  </h3>
   <h5>{{ contract.info.description }}</h5>
   <p><span i18n>Recipient</span>: {{ contract.contractRecipient }}</p>
 </div>
