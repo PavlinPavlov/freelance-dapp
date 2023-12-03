@@ -18,27 +18,31 @@
 .form-group {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   margin-bottom: 15px;
-  align-items: flex-start;
 }
 
-.form-group label {
-  width: 150px;
-  text-align: left;
-}
+/*.form-group label {*/
+/*  width: 150px;*/
+/*  text-align: left;*/
+/*}*/
 
 .form-group input {
-  flex: 1;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 9px;
 }
 
-#amount {
-  flex: 0 0 60%;
+.redeem-amount {
+  flex: 0.7;
 }
-#nonce {
-  flex: 0 0 15%;
+
+.redeem-nonce {
+  flex: 0.4;
+}
+
+.redeem-buttons {
+  flex: 1;
 }
 
 @media (max-width: 910px) {
