@@ -26,19 +26,15 @@
 
     <section class="col-flex-container" style="width: 60%">
 
-      <div class="btn-row">
+      <div class="btn-row" *ngIf="isOwner()">
         <h2 i18n>Actions</h2>
-        <button-sign *ngIf="isOwner()" [address]="openedContract.contractAddress"></button-sign>
-        <button mat-raised-button color="primary" *ngIf="isOwner()" i18n>Close Channel</button>
-        <button-verify *ngIf="isRecipient()"></button-verify>
-        <button mat-raised-button color="primary" *ngIf="isRecipient()" i18n>Redeem Payment</button>
+        <button-sign [address]="openedContract.contractAddress"></button-sign>
+        <button mat-raised-button color="primary" i18n>Close Channel</button>
       </div>
-
-      <hr style="margin: 0 0 10px 0">
 
       <div *ngIf="isRecipient()">
         <h2 i18n>Redeem</h2>
-          <app-redeem-form [openedContract]="openedContract"></app-redeem-form>
+        <app-redeem-form [openedContract]="openedContract"></app-redeem-form>
       </div>
 
     </section>
