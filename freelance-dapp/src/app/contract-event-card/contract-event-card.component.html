@@ -1,13 +1,13 @@
-<div>
+<div *ngIf="log">
   <div>
-    <p class="trim-text">{{ log?.message }}</p>
+    <p class="trim-text">{{ log.message }}</p>
   </div>
   <div>
     <span>Timestamp: </span>
-    <span>{{ log?.timestamp }}</span>
+    <span>{{ (log.timestamp * 1000) | timestampToDate }}</span>
   </div>
   <div>
     <span>Block Number: </span>
-    <span>{{ log?.blockNumber }}</span>
+    <span>{{ log.blockNumber }}</span>
   </div>
 </div>

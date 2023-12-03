@@ -22,6 +22,7 @@ import { RedeemFormComponent } from './redeem-form/redeem-form.component';
 import {MatIconModule} from '@angular/material/icon';
 import { ContractEventListComponent } from './contract-event-list/contract-event-list.component';
 import { ContractEventCardComponent } from './contract-event-card/contract-event-card.component';
+import { TimestampToDatePipe } from './timestamp-to-date.pipe';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ContractEventCardComponent } from './contract-event-card/contract-event
     RedeemFormComponent,
     ContractEventListComponent,
     ContractEventCardComponent,
+    TimestampToDatePipe,
   ],
   imports: [
     BrowserModule,
