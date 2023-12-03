@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {BigNumber, Contract, ethers} from 'ethers';
 import {PaymentChannel} from '../models/payment-channel.model';
 import {EventModel} from '../models/eventModel';
+import {UtilityService} from './utility.service';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,7 @@ export class BlockchainService {
   private _logTag = '[BCS]'
   private _provider: ethers.providers.Web3Provider;
   private _signer: ethers.providers.JsonRpcSigner;
+  private _interface = ethers.utils.Interface;
 
   constructor() {
     this.windowEthereum = (window as any).ethereum;
@@ -28,6 +30,8 @@ export class BlockchainService {
     this.windowEthereum.request({method: 'eth_requestAccounts'});
     this._provider = new ethers.providers.Web3Provider(this.windowEthereum);
     this._signer = this._provider.getSigner();
+    // @ts-ignore
+    this._interface = new ethers.utils.Interface(JSON.parse(this._abi));
 
     // Listen for account changes
     this.windowEthereum.on('accountsChanged', (accounts: string[]) => {
@@ -73,8 +77,6 @@ export class BlockchainService {
   }
 
   async getAllEvents(address: string) {
-    console.time('getAllEvents'); // Start timer
-
     const contract = await this.fromAddress(address);
 
     const [createdEvents,
@@ -88,24 +90,16 @@ export class BlockchainService {
       this.getClosedEvents(contract)
     ]);
 
-    const allEvents = [
-      ...createdEvents,
-      ...depositedEvents,
-      ...withdrawnEvents,
-      ...closedEvents
+
+    const allEthersEvents = [
+      ...createdEvents.map(event => this.toDomainEvent(event, 'Created')),
+      ...depositedEvents.map(event => this.toDomainEvent(event, 'Deposited')),
+      ...withdrawnEvents.map(event => this.toDomainEvent(event, 'Withdrawn')),
+      ...closedEvents.map(event => this.toDomainEvent(event, 'Closed'))
     ];
 
-    const blockPromises = allEvents.map(event => event.getBlock());
-    const blocks = await Promise.all(blockPromises);
-
-    const eventModels = blocks.map(
-      (block, index) =>
-        new EventModel(block.timestamp, allEvents[index].blockNumber, '')
-    );
-
-    console.timeEnd('getAllEvents'); // End timer
-
-    return eventModels;
+    allEthersEvents.reverse();
+    return await Promise.all(allEthersEvents);
   }
 
   // TODO Check how to do without any cast
@@ -125,4 +119,25 @@ export class BlockchainService {
     return contract.queryFilter((contract.filters as any).Created());
   }
 
+  private async toDomainEvent(event: ethers.Event, type: string): Promise<EventModel> {
+    const block = await event.getBlock()
+    return new EventModel(type, block.timestamp, block.number, this.getEventMessage(event, type))
+  }
+
+  private getEventMessage(event: ethers.Event, type: String): string {
+    const eventArgs = (this._interface as any).parseLog(event).args;
+
+    switch (type) {
+      case 'Created':
+        return `Created from ${eventArgs[0]} to ${eventArgs[1]}"`
+      case 'Deposited':
+        return `Deposited ${ethers.utils.formatEther(eventArgs[0])} ETH`
+      case 'Withdrawn':
+        return `Withdrawn ${ethers.utils.formatEther(eventArgs[0])} ETH`
+      case 'Closed':
+        return `Channel closed`
+    }
+
+    return 'TODO'
+  }
 }

@@ -35,15 +35,6 @@ td {
   justify-content: space-between;
 }
 
-.row-flex-container > .event-list {
-  flex: 1;
-  margin-right: 3rem;
-}
-
-.row-flex-container > .col-flex-container {
-  flex: 2;
-}
-
 .col-flex-container {
   display: flex;
   flex-direction: column;

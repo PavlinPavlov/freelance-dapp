@@ -6,13 +6,11 @@
   justify-content: space-between;
   margin: 2%;
 ">
-  <div style="width: 30%; overflow-y: scroll; max-height: 90vh;">
-    <app-contract-list (activeContract)="onContractSelected($event)"></app-contract-list>
-  </div>
-  <div style="width: 65%">
-    <app-contract-detail
-      *ngIf="openedContract"
-      [openedContract]="openedContract"></app-contract-detail>
-  </div>
+  <app-contract-list style="width: 30%"
+                     (activeContract)="onContractSelected($event)"></app-contract-list>
+  <app-contract-detail
+    style="width: 68%"
+    *ngIf="openedContract"
+    [openedContract]="openedContract"></app-contract-detail>
 </div>
 

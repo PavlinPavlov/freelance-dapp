@@ -1,5 +1,13 @@
 <div>
-  <p>{{ log?.timestamp }}</p>
-  <p>{{ log?.blockNumber }}</p>
-  <p>{{ log?.message }}</p>
+  <div>
+    <p class="trim-text">{{ log?.message }}</p>
+  </div>
+  <div>
+    <span>Timestamp: </span>
+    <span>{{ log?.timestamp }}</span>
+  </div>
+  <div>
+    <span>Block Number: </span>
+    <span>{{ log?.blockNumber }}</span>
+  </div>
 </div>
