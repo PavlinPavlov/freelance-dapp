@@ -1,25 +1,27 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.9;
-
+pragma solidity ^0.8.9; // (1)
+// (2)
 import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
 
 contract PaymentChannel {
-    
+    // (3)
     using ECDSA for bytes32;
-    using Strings for uint256;
 
+    // (4)
     struct Metadata {
         string title;
         string description;
     }
 
+    // (5)
     event Created(address indexed owner, address indexed recipient);
     event Deposited(uint256 indexed amount);
     event Withdrawn(uint256 indexed amount, uint256 indexed totalAmount);
     event Closed(uint256 indexed timestamp, uint256 indexed amount);
 
+    // (6)
     Metadata public metadata;
     address payable public owner;
     address payable public recipient;
@@ -28,6 +30,7 @@ contract PaymentChannel {
     uint256 public claimedNonce;
     uint256 public deadline;
 
+    // (7)
     constructor(
         address payable _recipient,
         string memory _title,
@@ -46,10 +49,12 @@ contract PaymentChannel {
             description: _description
         });
 
+        // (8)
         emit Created(owner, recipient);
         emit Deposited(msg.value);
     }
 
+    // (9)
     function redeem(bytes memory signature, uint256 amount, uint256 nonce) external {
 
         uint256 amountToClaim = amount - claimedAmount;
@@ -72,6 +77,7 @@ contract PaymentChannel {
         emit Withdrawn(amountToClaim, amount);
     }
 
+    // (10)
     function recoverSigner(bytes32 message, bytes memory sig)
         public
         pure
@@ -80,11 +86,13 @@ contract PaymentChannel {
         return message.recover(sig);
     }
 
+    // (11)
     function prefixed(bytes32 hash) internal pure returns (bytes32) {
         return
             keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", hash));
     }
 
+    // (12)
     function claimTimeout() public {
         require(msg.sender == owner);
 
@@ -94,6 +102,7 @@ contract PaymentChannel {
         uint256 leftBalance = address(this).balance;
         require(leftBalance > 0, "No funds available!");
         payable(msg.sender).transfer(leftBalance);
+        balance = 0;
 
         emit Closed(currTime, leftBalance);
     }
