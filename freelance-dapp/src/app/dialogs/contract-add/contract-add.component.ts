@@ -6,7 +6,8 @@ import {MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-contract-add',
-  templateUrl: './contract-add.component.html'
+  templateUrl: './contract-add.component.html',
+  styleUrls: ['./contract-add.component.css']
 })
 export class ContractAddComponent {
 

@@ -1,0 +1,24 @@
+.container {
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.form-group {
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.form-group label {
+  width: 150px;
+  margin-right: 20px;
+  text-align: right;
+}
+
+.form-group input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+}
