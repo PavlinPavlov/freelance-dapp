@@ -18,11 +18,12 @@ import {AddComponent} from './buttons/add/add.component';
 import {ContractAddComponent} from './dialogs/contract-add/contract-add.component';
 import {SignComponent} from './buttons/sign/sign.component';
 import {SignMessageComponent} from './dialogs/sign-message/sign-message.component';
-import { RedeemFormComponent } from './redeem-form/redeem-form.component';
+import {RedeemFormComponent} from './redeem-form/redeem-form.component';
 import {MatIconModule} from '@angular/material/icon';
-import { ContractEventListComponent } from './contract-event-list/contract-event-list.component';
-import { ContractEventCardComponent } from './contract-event-card/contract-event-card.component';
-import { TimestampToDatePipe } from './timestamp-to-date.pipe';
+import {ContractEventListComponent} from './contract-event-list/contract-event-list.component';
+import {ContractEventCardComponent} from './contract-event-card/contract-event-card.component';
+import {TimestampToDatePipe} from './timestamp-to-date.pipe';
+import {CloseComponent} from './buttons/close/close.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { TimestampToDatePipe } from './timestamp-to-date.pipe';
     ContractEventListComponent,
     ContractEventCardComponent,
     TimestampToDatePipe,
+    CloseComponent,
   ],
   imports: [
     BrowserModule,

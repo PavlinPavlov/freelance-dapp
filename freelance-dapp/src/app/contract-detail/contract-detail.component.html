@@ -28,8 +28,8 @@
 
       <div class="btn-row" *ngIf="isOwner()">
         <h2 i18n>Actions</h2>
-        <button-sign [address]="openedContract.contractAddress"></button-sign>
-        <button mat-raised-button color="primary" i18n>Close Channel</button>
+        <button-sign [address]="openedContract.contractAddress"/>
+        <button-close [address]="openedContract.contractAddress"/>
       </div>
 
       <div *ngIf="isRecipient()">

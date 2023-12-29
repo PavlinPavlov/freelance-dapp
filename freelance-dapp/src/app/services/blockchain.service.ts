@@ -76,6 +76,11 @@ export class BlockchainService {
     return this._signer;
   }
 
+  async closeChannel(address: string) {
+    const contract = await this.fromAddress(address);
+    await contract.claimTimeout();
+  }
+
   async getAllEvents(address: string) {
     const contract = await this.fromAddress(address);
 
