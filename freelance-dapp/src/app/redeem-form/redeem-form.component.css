@@ -45,6 +45,14 @@
   flex: 1;
 }
 
+.success-form {
+  border: 2px solid green;
+}
+
+.error-form {
+  border: 2px solid red;
+}
+
 @media (max-width: 910px) {
   .form-row {
     flex-direction: column;

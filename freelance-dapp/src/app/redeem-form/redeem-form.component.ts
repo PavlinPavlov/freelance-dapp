@@ -11,6 +11,10 @@ import {BlockchainService} from '../services/blockchain.service';
 })
 export class RedeemFormComponent {
 
+  verificationPassed: boolean = false;
+  verificationFailed: boolean = false;
+  verificationError: string = '';
+
   @Input('openedContract') openedContract!: ContractModel;
   blockchainService: BlockchainService;
 
@@ -19,6 +23,10 @@ export class RedeemFormComponent {
   }
 
   async onRedeemSubmit(redeemForm: NgForm) {
+    this.verificationPassed = false;
+    this.verificationFailed = false;
+    this.verificationError = '';
+
     const signature = redeemForm.value.signature;
     const amountWei = UtilityService.getEtherAmount(redeemForm.value.amount.toString());
     const nonce = redeemForm.value.nonce;
@@ -27,5 +35,28 @@ export class RedeemFormComponent {
       await this.blockchainService.fromAddress(this.openedContract.contractAddress);
 
     await deployedContract.redeem(signature, amountWei, nonce);
+  }
+
+  async onVerifyClick(redeemForm: NgForm) {
+    this.verificationPassed = false;
+    this.verificationFailed = false;
+    this.verificationError = '';
+
+    const signature = redeemForm.value.signature;
+    const amountWei = UtilityService.getEtherAmount(redeemForm.value.amount.toString());
+    const nonce = redeemForm.value.nonce;
+
+    let deployedContract =
+      await this.blockchainService.fromAddress(this.openedContract.contractAddress);
+
+    let verifyPromise = deployedContract.callStatic['redeem'](signature, amountWei, nonce);
+
+    verifyPromise.then((result: any) => {
+      this.verificationPassed = true;
+    }).catch((error: any) => {
+      this.verificationFailed = true;
+      this.verificationError = error.reason;
+    });
+
   }
 }

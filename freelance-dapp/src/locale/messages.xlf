@@ -34,7 +34,7 @@
         <source>Recipient</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contract-card/contract-card.component.html</context>
-          <context context-type="linenumber">4</context>
+          <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7887484314446514238" datatype="html">
@@ -79,29 +79,29 @@
           <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3820601025163305457" datatype="html">
-        <source>Redeem Payment</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/contract-detail/contract-detail.component.html</context>
-          <context context-type="linenumber">34</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="7801884781403562273" datatype="html">
         <source>Redeem</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contract-detail/contract-detail.component.html</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">36</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/redeem-form/redeem-form.component.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7517014163348734512" datatype="html">
+        <source>AAAAA</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contract-event-card/contract-event-card.component.html</context>
+          <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3862620244510026557" datatype="html">
         <source>Emitted events</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contract-event-list/contract-event-list.component.html</context>
-          <context context-type="linenumber">2</context>
+          <context context-type="linenumber">1</context>
         </context-group>
       </trans-unit>
       <trans-unit id="735927792441394082" datatype="html">
@@ -145,6 +145,10 @@
           <context context-type="sourcefile">src/app/dialogs/contract-create/contract-create.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/redeem-form/redeem-form.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="4307553722019999573" datatype="html">
         <source>Deadline:</source>
@@ -167,18 +171,18 @@
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5746562516323695888" datatype="html">
-        <source>Check Amount:</source>
+      <trans-unit id="3094013806933453534" datatype="html">
+        <source>Nonce:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/redeem-form/redeem-form.component.html</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8740317861321962739" datatype="html">
-        <source>Check Nonce:</source>
+      <trans-unit id="8913794084097958305" datatype="html">
+        <source>Verify</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/redeem-form/redeem-form.component.html</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
     </body>
