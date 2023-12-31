@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Create New Contract</h1>
+  <h1 i18n>Create New Contract</h1>
   <form class="contract-form" (ngSubmit)="onCreateSubmit(f)" #f="ngForm">
     <div class="form-group">
       <label for="title" i18n>Contract title:</label>
@@ -20,7 +20,7 @@
       </div>
       <div class="form-group">
         <label for="deadline" i18n>Deadline:</label>
-        <input [ngModel]="getFutureDate()" type="date" id="deadline" name="deadline" forma>
+        <input [ngModel]="getFutureDate()" type="date" id="deadline" name="deadline">
       </div>
     </div>
     <div class="form-group">

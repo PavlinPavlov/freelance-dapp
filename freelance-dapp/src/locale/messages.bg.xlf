@@ -10,6 +10,13 @@
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="770460729240875021" datatype="html">
+        <source>Close Contract</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/buttons/close/close.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="8850028603605418142" datatype="html">
         <source>Create Contract</source>
         <target>Съзадай договор</target>
@@ -102,28 +109,48 @@
         <source>Redeem</source>
         <target>Осребряване</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/contract-detail/contract-detail.component.html</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="sourcefile">src/app/contract-event-card/contract-event-card.component.html</context>
+          <context context-type="linenumber">6</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="5956063009570990159" datatype="html">
+        <source>Block Number: </source>
+        <target>№ на блок: </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/redeem-form/redeem-form.component.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="sourcefile">src/app/contract-event-card/contract-event-card.component.html</context>
+          <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3862620244510026557" datatype="html">
         <source>Emitted events</source>
         <target>Събития</target>
         <context-group purpose="location">
-            <context context-type="sourcefile">src/app/contract-event-list/contract-event-list.component.html</context>
-            <context context-type="linenumber">2</context>
+          <context context-type="sourcefile">src/app/contract-event-list/contract-event-list.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4056054366517637297" datatype="html">
+        <source>Timestamp: </source>
+        <target>Време: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contract-event-card/contract-event-card.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="332398526207679086" datatype="html">
+        <source>Add Contract by Address</source>
+        <target>Добави договор по адрес</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/contract-add/contract-add.component.html</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="735927792441394082" datatype="html">
         <source>Contract address:</source>
-        <target>Адрес на договора</target>
+        <target>Адрес на договора:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dialogs/contract-add/contract-add.component.html</context>
-          <context context-type="linenumber">3</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3249513483374643425" datatype="html">
@@ -131,7 +158,15 @@
         <target>Добави</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dialogs/contract-add/contract-add.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5799623497522827254" datatype="html">
+        <source>Create New Contract</source>
+        <target>Създаване на нов договор</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/contract-create/contract-create.component.html</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3438646521734595955" datatype="html">
@@ -152,7 +187,7 @@
       </trans-unit>
       <trans-unit id="2921019456985884952" datatype="html">
         <source>Recipient:</source>
-        <target>Получател</target>
+        <target>Получател:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dialogs/contract-create/contract-create.component.html</context>
           <context context-type="linenumber">13</context>
@@ -165,9 +200,14 @@
           <context context-type="sourcefile">src/app/dialogs/contract-create/contract-create.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/redeem-form/redeem-form.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="4307553722019999573" datatype="html">
         <source>Deadline:</source>
+        <target>Краен срок:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dialogs/contract-create/contract-create.component.html</context>
           <context context-type="linenumber">22</context>
@@ -175,7 +215,7 @@
       </trans-unit>
       <trans-unit id="5674286808255988565" datatype="html">
         <source>Create</source>
-        <target>Създай:</target>
+        <target>Създай</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dialogs/contract-create/contract-create.component.html</context>
           <context context-type="linenumber">27</context>
@@ -194,15 +234,22 @@
         <target>Количество:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/redeem-form/redeem-form.component.html</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8740317861321962739" datatype="html">
-        <source>Check Nonce:</source>
-        <target>Нонс:</target>
+      <trans-unit id="505747409807743136" datatype="html">
+        <source>Проверка</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/redeem-form/redeem-form.component.html</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3094013806933453534" datatype="html">
+        <source>Nonce:</source>
+        <target>Конт. Число:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/redeem-form/redeem-form.component.html</context>
+          <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
     </body>

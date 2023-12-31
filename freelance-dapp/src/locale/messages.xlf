@@ -9,6 +9,13 @@
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="770460729240875021" datatype="html">
+        <source>Close Contract</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/buttons/close/close.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="8850028603605418142" datatype="html">
         <source>Create Contract</source>
         <context-group purpose="location">
@@ -72,13 +79,6 @@
           <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="2894812370562308385" datatype="html">
-        <source>Close Channel</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/contract-detail/contract-detail.component.html</context>
-          <context context-type="linenumber">32</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="7801884781403562273" datatype="html">
         <source>Redeem</source>
         <context-group purpose="location">
@@ -90,11 +90,18 @@
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7517014163348734512" datatype="html">
-        <source>AAAAA</source>
+      <trans-unit id="4056054366517637297" datatype="html">
+        <source>Timestamp: </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contract-event-card/contract-event-card.component.html</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5956063009570990159" datatype="html">
+        <source>Block Number: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contract-event-card/contract-event-card.component.html</context>
+          <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3862620244510026557" datatype="html">
@@ -104,18 +111,32 @@
           <context context-type="linenumber">1</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="332398526207679086" datatype="html">
+        <source>Add Contract by Address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/contract-add/contract-add.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="735927792441394082" datatype="html">
         <source>Contract address:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dialogs/contract-add/contract-add.component.html</context>
-          <context context-type="linenumber">3</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3249513483374643425" datatype="html">
         <source>Add</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dialogs/contract-add/contract-add.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5799623497522827254" datatype="html">
+        <source>Create New Contract</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dialogs/contract-create/contract-create.component.html</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3438646521734595955" datatype="html">
@@ -178,8 +199,8 @@
           <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8913794084097958305" datatype="html">
-        <source>Verify</source>
+      <trans-unit id="505747409807743136" datatype="html">
+        <source>Проверка</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/redeem-form/redeem-form.component.html</context>
           <context context-type="linenumber">18</context>
